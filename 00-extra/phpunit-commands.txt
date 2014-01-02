@@ -1,0 +1,2 @@
+phpunit -c app/
+phpunit -c app/ --overage-html /tmp/coverage
