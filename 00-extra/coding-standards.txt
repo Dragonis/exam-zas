@@ -1,0 +1,7 @@
+1. PHPCS
+
+phpcs  --standard=Symfony2  src/ --extensions=php --ignore=*Test.php --encoding=utf-8 > tmp/phpcs-output.txt
+
+2. PHP CS FIXER
+
+php-cs-fixer fix src/
