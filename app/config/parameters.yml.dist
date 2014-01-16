@@ -1,6 +1,12 @@
 # This file is a "template" of what your parameters.yml file should look like
 parameters:
+
+    #mysql
     database_driver:   pdo_mysql
+
+    #postgresql
+    #database_driver:   pdo_pgsql
+
     database_host:     127.0.0.1
     database_port:     ~
     database_name:     symfony
