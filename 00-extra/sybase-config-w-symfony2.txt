@@ -1,0 +1,80 @@
+1. Instalacja tsql w ubuntu
+===========================
+
+sudo apt-get install freetds-bin
+
+ten działa (publiczny IP/ustalony przez DHCP/VM mapuje porty)
+tsql -H 10.36.0.40 -p 5000 -U sa -P alamakota
+
+te nie działają
+tsql -H 10.0.2.15 -p 5000 -U sa
+tsql -H 33.33.33.10 -p 5000 -U sa
+
+
+2. Konfiguracja tsql
+====================
+
+tsql -C
+
+plik /etc/freetsql/freetsql.conf
+
+
+[symf]
+        host = 10.36.0.40
+        port = 5000
+        tds version = 5.0
+        text size = 64512
+        client charset = latin2
+
+
+3. Ustalamy locale
+==================
+
+locale
+
+locale -a
+
+en_US.utf8
+
+sudo update-locale LANG=en_US.utf8
+sudo update-locale LC_ALL=en_US.utf8
+
+Pamiętaj by się przelogować
+
+4. Połączenie klientem tsql z serwerem sybase
+=============================================
+
+tsql -S symf -U sa -P alamakota
+
+Powyższa komenda powinna łączyć się stosując nowe kodowanie
+
+W pliku konfiguracyjnym jest wpisane latin2
+
+Dlaczego???
+
+
+5. Instalacja bibliotek PHP
+===========================
+
+sudo apt-get install php5-sybase -y
+sudo service apache2 restart
+
+php -r "phpinfo();" | grep "PDO drivers"
+
+
+6. Klient Squirrel
+===========================
+
+Pamiętaj o charset=utf-8 we właściwościach sesji
+
+
+7. Adresy
+=========
+
+http://stackoverflow.com/questions/11081993/connecting-doctrine-2-to-mssql-for-symfony-2-on-linux
+http://www.freetds.org/userguide/choosingtdsprotocol.htm
+http://www.leaseweblabs.com/2013/05/symfony2-mssql-support-with-pdo_dblib/
+https://help.ubuntu.com/community/Locale
+http://stackoverflow.com/questions/8492941/doctrine-2-how-to-add-custom-dbal-driver
+https://github.com/trooney/PDODblibBundle
+
