@@ -5,7 +5,7 @@ default:
             selenium2: ~
 
             # The name of the host from Vagrantfile
-            base_url: http://abc.example.net/web/
+            base_url: http://abc.example.net/web/app_dev.php/
 
 
             # or 127.0.0.1
