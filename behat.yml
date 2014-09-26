@@ -1,0 +1,16 @@
+default:
+    extensions:
+        Behat\MinkExtension\Extension:
+            goutte: ~
+            selenium2: ~
+
+            # The name of the host from Vagrantfile
+            base_url: http://abc.example.net/web/
+
+
+            # or 127.0.0.1
+            #base_url: http://127.0.0.1/web/
+
+            #javascript_session: selenium2
+            #browser_name: firefox
+
