@@ -5,11 +5,10 @@ default:
             selenium2: ~
 
             # The name of the host from Vagrantfile
-            base_url: http://abc.example.net/web/app_dev.php/
-
+            base_url: http://abc.example.net/
 
             # or 127.0.0.1
-            #base_url: http://127.0.0.1/web/
+            #base_url: http://127.0.0.1/
 
             #javascript_session: selenium2
             #browser_name: firefox
