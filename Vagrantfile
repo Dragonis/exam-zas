@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     if FFI::Platform::IS_WINDOWS
         print "\n\n   ===> win\n\n"
         config.vm.synced_folder ".", "/vagrant", :nfs => false
-        config.vm.network :forwarded_port, guest: 80, host: 8080
+        config.vm.network :forwarded_port, guest: 80, host: 8880
     else
         print "\n\n   ===> not win\n\n"
         config.vm.network :private_network, ip: "33.33.33.10"
