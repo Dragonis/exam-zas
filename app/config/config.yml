@@ -17,7 +17,14 @@ framework:
         #assets_version: SomeVersionScheme
     default_locale:  pl
     trusted_proxies: ~
-    session:         ~
+
+#    session:         ~
+#http://symfony.com/doc/current/cookbook/session/sessions_directory.html
+#https://github.com/symfony/symfony/issues/7885
+    session:
+        handler_id: session.handler.native_file
+        save_path: "/tmp/sessions"
+
     fragments:       ~
     http_method_override: true
 
