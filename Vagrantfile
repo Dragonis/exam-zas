@@ -2,7 +2,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
-    config.vm.box = "lamp-vm-v0.2.15"
+    config.vm.box = "symfony-v0.1.0"
     config.vm.hostname = "abc.example.net"
 
     require 'ffi'
