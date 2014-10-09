@@ -5,7 +5,8 @@ default:
             selenium2: ~
 
             # The name of the host from Vagrantfile
-            base_url: http://abc.example.net/
+            # Use app_dev.php to avoid clearing the cache
+            base_url: http://abc.example.net/app_dev.php/
 
             # or 127.0.0.1
             #base_url: http://127.0.0.1/
