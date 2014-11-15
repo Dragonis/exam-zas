@@ -37,5 +37,8 @@ git merge 2.3/Behat
 vagrant up
 rm -rf bin/
 rm -rf vendor/
+composer install
+
+
 
 
