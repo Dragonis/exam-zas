@@ -1,0 +1,10 @@
+mkdir example
+cd example
+
+git clone https://github.com/gajdaw/symfony-standard.git .
+git checkout 2.3/Startup
+
+git remote rm origin
+git branch -m 2.3/Startup master
+
+git clone https://github.com/gajdaw/symfony-standard.git -b 2.3/Startup .
