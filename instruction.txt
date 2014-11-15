@@ -1,0 +1,17 @@
+git branch | grep 2.3/
+
+git checkout 2.3/FullDistribution
+git reset --hard v2.3.21
+
+git merge 2.3/Instruction
+git merge 2.3/Gitignore
+git merge 2.3/Vagrant
+
+git merge 2.3/Cheatsheet
+git merge 2.3/Db
+
+
+git merge 2.3/Cleanup
+
+
+
