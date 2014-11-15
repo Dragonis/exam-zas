@@ -1,16 +1,19 @@
 default:
+    formatters:
+        pretty:
+            verbose:  true
+            paths:    false
+            snippets: false
+
+    suites:
+        default:
+            contexts:
+                - Context\FeatureContext
+
     extensions:
-        Behat\MinkExtension\Extension:
-            goutte: ~
-            selenium2: ~
-
-            # The name of the host from Vagrantfile
-            # Use app_dev.php to avoid clearing the cache
-            base_url: http://abc.example.net/app_dev.php/
-
-            # or 127.0.0.1
-            #base_url: http://127.0.0.1/
-
-            #javascript_session: selenium2
-            #browser_name: firefox
+        Behat\MinkExtension:
+            base_url:  'http://localhost/'
+            sessions:
+                default:
+                    goutte: ~
 
