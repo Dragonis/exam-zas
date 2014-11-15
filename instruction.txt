@@ -39,6 +39,5 @@ rm -rf bin/
 rm -rf vendor/
 composer install
 
-
-
+commit composer.lock file
 
