@@ -32,9 +32,10 @@ git merge 2.3/FOSUserBundle
 git merge 2.3/StofDoctrineExtensionsBundle
 git merge 2.3/Behat
 
-4. Create composer.json file
+4. Create composer.lock file
 
 vagrant up
+rm composer.lock
 rm -rf bin/
 rm -rf vendor/
 composer install
