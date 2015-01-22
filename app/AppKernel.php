@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new My\UserBundle\MyUserBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new BDDTutorial\WojtekSasielaBundle\BDDTutorialWojtekSasielaBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
