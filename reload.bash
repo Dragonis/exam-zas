@@ -14,3 +14,4 @@ php app/console doctrine:schema:update --force
 
 #php app/console doctrine:fixtures -n
 #php app/console fos:user:create admin admin@example.net loremipsum --super-admin
+php app/console fos:user:create admin admin@example.net loremipsum --super-admin
