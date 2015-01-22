@@ -21,7 +21,9 @@ class AppKernel extends Kernel
             new My\UserBundle\MyUserBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new BDDTutorial\WojtekSasielaBundle\BDDTutorialWojtekSasielaBundle(),
-        );
+            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle()
+
+            );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();

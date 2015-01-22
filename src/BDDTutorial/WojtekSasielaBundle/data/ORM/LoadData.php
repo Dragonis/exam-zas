@@ -24,7 +24,7 @@ class LoadData implements FixtureInterface
         // towary
         foreach ($yml as $item) {
             $towary = new Towar();
-            $towary->setnazwa($item['Nazwa']);
+            $towary->setsetnazwa($item['Nazwa']);
             $towary->setCenaJednostkowa($item['CenaJednostkowa']);
             $manager->persist($towary);
         }
